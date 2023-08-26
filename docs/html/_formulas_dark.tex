@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\color{white}
+\pagecolor{black}
+% Packages requested by user
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+
+\pagestyle{empty}
+\begin{document}
+$n_max=2$
+\pagebreak
+
+\[ \begin{matrix} H_0(z_0) & H_1(z_0) & H_2(z_0) \\ H_0(z_1) & H_1(z_1) & H_2(z_1) \\ H_0(z_2) & H_1(z_2) & H_2(z_2) \end{matrix} \]
+\pagebreak
+
+\[Z= \begin{matrix} 1 & 5 \end{matrix} \]
+\pagebreak
+
+\[ \begin{matrix} 1 & 2 & 2 & -4 & -20 1 & 10 & 98 & 940 & 8812 \end{matrix} \]
+\pagebreak
+
+\[ Z=\begin{matrix} 1 & 1 & 1 \end{matrix} \]
+\pagebreak
+
+\[ Z=\begin{matrix} 1 \\ 1 \\ 1 \end{matrix} \]
+\pagebreak
+
+$n_{max}=2$
+\pagebreak
+
+\[ \begin{bmatrix} H_0(z_0) & H_1(z_0) & H_2(z_0) \\ H_0(z_1) & H_1(z_1) & H_2(z_1) \\ H_0(z_2) & H_1(z_2) & H_2(z_2) \end{bmatrix} \]
+\pagebreak
+
+\[Z= \begin{bmatrix} 1 & 5 \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} 1 & 2 & 2 & -4 & -20 1 & 10 & 98 & 940 & 8812 \end{bmatrix} \]
+\pagebreak
+
+\[ Z=\begin{bmatrix} 1 & 1 & 1 \end{bmatrix} \]
+\pagebreak
+
+\[ Z=\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \]
+\pagebreak
+
+$Z=\begin{bmatrix} 1 & 1 & 1 \end{bmatrix}$
+\pagebreak
+
+\[ \begin{bmatrix} 1 & 2 & 2 & -4 & -20 \\ 1 & 10 & 98 & 940 & 8812 \end{bmatrix} \]
+\pagebreak
+
+$Z=\begin{bmatrix} z_0 & z_1 & z_2 \end{bmatrix}$
+\pagebreak
+
+$Z=\begin{bmatrix} z_0 & ... & z_m \end{bmatrix}$
+\pagebreak
+
+\[ \begin{bmatrix} H_0(z_0) & .. & H_{n_{max}}(z_0) \\ .. & .. & .. \\ H_0(z_m) & .. & H_{n_{max}}(z_m) \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} psi_0(z_0) & psi_1(z_0) & psi_2(z_0) \\ psi_0(z_1) & psi_1(z_1) & psi_2(z_1) \\ psi_0(z_2) & psi_1(z_2) & psi_2(z_2) \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} \int \psi^*_0(z)\psi_0(z) dz & \int \psi^*_0(z)\psi_1(z) dz \\ \int \psi^*_1(z)\psi_0(z) dz & \int \psi^*_1(z)\psi_1(z) dz \\ \end{bmatrix} \]
+\pagebreak
+
+\[Z= \begin{bmatrix} E_0 \\ E_1 \\ ... \\ E_{n_{max}} \end{bmatrix} \]
+\pagebreak
+
+\[Z= \begin{bmatrix} 1 \\ 5 \end{bmatrix} \]
+\pagebreak
+
+\[ Z=\begin{bmatrix} 1 \\ 5 \\ 2 \\ 8 \end{bmatrix} \]
+\pagebreak
+
+\[ \begin{bmatrix} 1 & 2\\ 1 & 10\\ 1 & 4\\ 1 & 16 \end{bmatrix} \]
+\pagebreak
+
+$Z=\begin{bmatrix} z_0 & ... & z_{q-1} \end{bmatrix}$
+\pagebreak
+
+\[
+ \begin{bmatrix}
+ H_0(z_0) & .. & H_{n_{max}-1}(z_0) \\
+ .. & .. & .. \\
+ H_0(z_q) & .. & H_{n_{max}-1}(z_q)
+ \end{bmatrix}
+ \]
+\pagebreak
+
+$vec\_eta=\begin{bmatrix} \eta_0 & ... & \eta_{q-1} \end{bmatrix}$
+\pagebreak
+
+\[
+ \begin{bmatrix}
+ L_0^m(\eta_0) & .. & L_{n_{max}-1}^m(\eta_0) \\
+ .. & .. & .. \\
+ L_0^m(\eta_q) & .. & L_{n_{max}-1}^m(\eta_q)
+ \end{bmatrix}
+ \]
+\pagebreak
+
+$Z=\begin{bmatrix} z_0 & ... & z_{m-1} \end{bmatrix}$
+\pagebreak
+
+$Z=\begin{bmatrix} r_0 & ... & r_{m-1} \end{bmatrix}$
+\pagebreak
+
+\end{document}

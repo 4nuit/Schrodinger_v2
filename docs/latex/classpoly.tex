@@ -1,0 +1,75 @@
+\hypertarget{classpoly}{}\doxysection{poly Class Reference}
+\label{classpoly}\index{poly@{poly}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpoly_a62b9018ffc67b85d9fcad77c4dc45a35}{calc\+Hermite}} (int, const arma\+::vec \&)
+\begin{DoxyCompactList}\small\item\em Construct a new arma\+::calc Hermite object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpoly_a3246a792682d2e6cfe55bc6b630020ad}{calc\+Laguerre}} (int, int, const arma\+::vec \&)
+\item 
+const arma\+::vec \mbox{\hyperlink{classpoly_a378e8a35ad1fdd09b88a2cdd76967e1d}{hermite}} (int)
+\begin{DoxyCompactList}\small\item\em Renvoie les résultats du polynome d\textquotesingle{}Hermite d\textquotesingle{}indice i=0 à un entier donné n\+\_\+max appliqué à un vecteur colonne Z, sous forme d\textquotesingle{}une matrice. \end{DoxyCompactList}\item 
+const arma\+::vec \mbox{\hyperlink{classpoly_a75b9ecb713ca333d4ebb54be2713119a}{laguerre}} (int, int)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpoly_a62b9018ffc67b85d9fcad77c4dc45a35}\label{classpoly_a62b9018ffc67b85d9fcad77c4dc45a35}} 
+\index{poly@{poly}!calcHermite@{calcHermite}}
+\index{calcHermite@{calcHermite}!poly@{poly}}
+\doxysubsubsection{\texorpdfstring{calcHermite()}{calcHermite()}}
+{\footnotesize\ttfamily void poly\+::calc\+Hermite (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+max,  }\item[{const arma\+::vec \&}]{Z }\end{DoxyParamCaption})}
+
+
+
+Construct a new arma\+::calc Hermite object. 
+
+Renvoie les résultats du polynome d\textquotesingle{}Hermite d\textquotesingle{}indice i=0 à un entier donné n\+\_\+max appliqué à un vecteur colonne Z, sous forme d\textquotesingle{}une matrice.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+max} & Indice max des polynomes d\textquotesingle{}Hermites utilisés dans la matrice \\
+\hline
+{\em Z} & Vecteur colonne contenant les points à appliquer aux polynomes d\textquotesingle{}Hermite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+arma\+::mat Retourne une matrice de la forme suivante \+: $Z=\begin{bmatrix} z_0 & ... & z_m \end{bmatrix}$ \[ \begin{bmatrix} H_0(z_0) & .. & H_{n_{max}}(z_0) \\ .. & .. & .. \\ H_0(z_m) & .. & H_{n_{max}}(z_m) \end{bmatrix} \] 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpoly_a3246a792682d2e6cfe55bc6b630020ad}\label{classpoly_a3246a792682d2e6cfe55bc6b630020ad}} 
+\index{poly@{poly}!calcLaguerre@{calcLaguerre}}
+\index{calcLaguerre@{calcLaguerre}!poly@{poly}}
+\doxysubsubsection{\texorpdfstring{calcLaguerre()}{calcLaguerre()}}
+{\footnotesize\ttfamily void poly\+::calc\+Laguerre (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+max,  }\item[{int}]{m\+\_\+max,  }\item[{const arma\+::vec \&}]{Z }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+arma\+::mat 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpoly_a378e8a35ad1fdd09b88a2cdd76967e1d}\label{classpoly_a378e8a35ad1fdd09b88a2cdd76967e1d}} 
+\index{poly@{poly}!hermite@{hermite}}
+\index{hermite@{hermite}!poly@{poly}}
+\doxysubsubsection{\texorpdfstring{hermite()}{hermite()}}
+{\footnotesize\ttfamily const arma\+::vec poly\+::hermite (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Renvoie les résultats du polynome d\textquotesingle{}Hermite d\textquotesingle{}indice i=0 à un entier donné n\+\_\+max appliqué à un vecteur colonne Z, sous forme d\textquotesingle{}une matrice. 
+
+\begin{DoxyReturn}{Returns}
+arma\+::mat La matrice avec les résultats du polynome d\textquotesingle{}Hermite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpoly_a75b9ecb713ca333d4ebb54be2713119a}\label{classpoly_a75b9ecb713ca333d4ebb54be2713119a}} 
+\index{poly@{poly}!laguerre@{laguerre}}
+\index{laguerre@{laguerre}!poly@{poly}}
+\doxysubsubsection{\texorpdfstring{laguerre()}{laguerre()}}
+{\footnotesize\ttfamily const arma\+::vec poly\+::laguerre (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+arma\+::mat 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/poly.\+h\item 
+src/poly.\+cpp\end{DoxyCompactItemize}

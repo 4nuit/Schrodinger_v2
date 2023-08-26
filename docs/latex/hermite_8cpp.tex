@@ -1,0 +1,50 @@
+\hypertarget{hermite_8cpp}{}\doxysection{src/hermite.cpp File Reference}
+\label{hermite_8cpp}\index{src/hermite.cpp@{src/hermite.cpp}}
+
+
+Implémentation d\textquotesingle{}\mbox{\hyperlink{hermite_8h}{hermite.\+h}}.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$armadillo$>$}\newline
+Include dependency graph for hermite.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{hermite_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+arma\+::mat \mbox{\hyperlink{hermite_8cpp_ac7bcec0301caadaa86c5b685e809a472}{hermite\+Mat}} (int n\+\_\+max, arma\+::vec Z)
+\begin{DoxyCompactList}\small\item\em Renvoie les résultats du polynome d\textquotesingle{}Hermite d\textquotesingle{}indice i=0 à un entier donné n\+\_\+max appliqué à un vecteur colonne Z, sous forme d\textquotesingle{}une matrice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implémentation d\textquotesingle{}\mbox{\hyperlink{hermite_8h}{hermite.\+h}}. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hermite_8cpp_ac7bcec0301caadaa86c5b685e809a472}\label{hermite_8cpp_ac7bcec0301caadaa86c5b685e809a472}} 
+\index{hermite.cpp@{hermite.cpp}!hermiteMat@{hermiteMat}}
+\index{hermiteMat@{hermiteMat}!hermite.cpp@{hermite.cpp}}
+\doxysubsubsection{\texorpdfstring{hermiteMat()}{hermiteMat()}}
+{\footnotesize\ttfamily arma\+::mat hermite\+Mat (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+max,  }\item[{arma\+::vec}]{Z }\end{DoxyParamCaption})}
+
+
+
+Renvoie les résultats du polynome d\textquotesingle{}Hermite d\textquotesingle{}indice i=0 à un entier donné n\+\_\+max appliqué à un vecteur colonne Z, sous forme d\textquotesingle{}une matrice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+max} & Indice max des polynomes d\textquotesingle{}Hermites utilisés dans la matrice \\
+\hline
+{\em Z} & Vecteur colonne contenant les points à appliquer aux polynomes d\textquotesingle{}Hermite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+arma\+::mat Retourne une matrice de la forme suivante \+: $Z=\begin{bmatrix} z_0 & ... & z_m \end{bmatrix}$ \[ \begin{bmatrix} H_0(z_0) & .. & H_{n_{max}}(z_0) \\ .. & .. & .. \\ H_0(z_m) & .. & H_{n_{max}}(z_m) \end{bmatrix} \] 
+\end{DoxyReturn}

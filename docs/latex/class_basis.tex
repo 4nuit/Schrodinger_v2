@@ -1,0 +1,145 @@
+\hypertarget{class_basis}{}\doxysection{Basis Class Reference}
+\label{class_basis}\index{Basis@{Basis}}
+
+
+Classe pour les fonctions de base, et la troncature de base.  
+
+
+
+
+{\ttfamily \#include $<$basis.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_basis_ad9c63b88e88160648d2e961af3d894aa}{Basis}} (double, double, int, double)
+\begin{DoxyCompactList}\small\item\em Construit un objet servant à réaliser la troncature de base et à récupérer les composants Z et R de la densité locale. \end{DoxyCompactList}\item 
+arma\+::vec \mbox{\hyperlink{class_basis_a13dd26ef5b5ceebe04135c018b34606e}{r\+Part}} (const arma\+::vec \&, int, int)
+\begin{DoxyCompactList}\small\item\em Composante R de la densité locale. \end{DoxyCompactList}\item 
+arma\+::vec \mbox{\hyperlink{class_basis_a22a3d3b6b36eabfa5405fce84ac6dd4e}{z\+Part}} (const arma\+::vec \&, int)
+\begin{DoxyCompactList}\small\item\em Composante Z de la densité locale. \end{DoxyCompactList}\item 
+arma\+::mat \mbox{\hyperlink{class_basis_a3f514f5473dff6fee29421e9acb26055}{basis\+Func}} (int m, int n, int n\+\_\+z, const arma\+::vec \&, const arma\+::vec \&)
+\begin{DoxyCompactList}\small\item\em Matrice des phi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_basis_ab6095856207deef6f202fdc127d7c076}{m\+Max}}
+\begin{DoxyCompactList}\small\item\em Indice de base max des m. \end{DoxyCompactList}\item 
+arma\+::ivec \mbox{\hyperlink{class_basis_a611451ea36afb2b83e64e6f12cc8f4f7}{n\+Max}}
+\begin{DoxyCompactList}\small\item\em Matrice contenant les indices de base max des n. \end{DoxyCompactList}\item 
+arma\+::imat \mbox{\hyperlink{class_basis_a457e804b99cbfb30f81bf2bb6d3f794e}{n\+\_\+z\+Max}}
+\begin{DoxyCompactList}\small\item\em Matrice contenant les indices de base max des n pour la partie z. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe pour les fonctions de base, et la troncature de base. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_basis_ad9c63b88e88160648d2e961af3d894aa}\label{class_basis_ad9c63b88e88160648d2e961af3d894aa}} 
+\index{Basis@{Basis}!Basis@{Basis}}
+\index{Basis@{Basis}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{Basis()}{Basis()}}
+{\footnotesize\ttfamily Basis\+::\+Basis (\begin{DoxyParamCaption}\item[{double}]{br,  }\item[{double}]{bz,  }\item[{int}]{N,  }\item[{double}]{Q }\end{DoxyParamCaption})}
+
+
+
+Construit un objet servant à réaliser la troncature de base et à récupérer les composants Z et R de la densité locale. 
+
+Construct a new \mbox{\hyperlink{class_basis}{Basis}}\+:\+: \mbox{\hyperlink{class_basis}{Basis}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em br} & paramètre de déformation de base \\
+\hline
+{\em bz} & 2e paramètre de déformation de base \\
+\hline
+{\em N} & paramètre de troncation de base \\
+\hline
+{\em Q} & paramètre de troncation de base \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_basis_a3f514f5473dff6fee29421e9acb26055}\label{class_basis_a3f514f5473dff6fee29421e9acb26055}} 
+\index{Basis@{Basis}!basisFunc@{basisFunc}}
+\index{basisFunc@{basisFunc}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{basisFunc()}{basisFunc()}}
+{\footnotesize\ttfamily arma\+::mat Basis\+::basis\+Func (\begin{DoxyParamCaption}\item[{int}]{m,  }\item[{int}]{n,  }\item[{int}]{n\+\_\+z,  }\item[{const arma\+::vec \&}]{z\+Vals,  }\item[{const arma\+::vec \&}]{r\+Vals }\end{DoxyParamCaption})}
+
+
+
+Matrice des phi. 
+
+\begin{DoxyReturn}{Returns}
+arma\+::vec Le vecteur contenant les composantes phi 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_basis_a13dd26ef5b5ceebe04135c018b34606e}\label{class_basis_a13dd26ef5b5ceebe04135c018b34606e}} 
+\index{Basis@{Basis}!rPart@{rPart}}
+\index{rPart@{rPart}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{rPart()}{rPart()}}
+{\footnotesize\ttfamily arma\+::vec Basis\+::r\+Part (\begin{DoxyParamCaption}\item[{const arma\+::vec \&}]{r\+Vals,  }\item[{int}]{m,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Composante R de la densité locale. 
+
+Composantes R et Z de la densité locale (Base cylindrique) 
+
+\begin{DoxyReturn}{Returns}
+arma\+::vec Le vecteur contenant les composantes R de la densité locale pour un vecteur donné contenant les coordonnées r. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_basis_a22a3d3b6b36eabfa5405fce84ac6dd4e}\label{class_basis_a22a3d3b6b36eabfa5405fce84ac6dd4e}} 
+\index{Basis@{Basis}!zPart@{zPart}}
+\index{zPart@{zPart}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{zPart()}{zPart()}}
+{\footnotesize\ttfamily arma\+::vec Basis\+::z\+Part (\begin{DoxyParamCaption}\item[{const arma\+::vec \&}]{z\+Vals,  }\item[{int}]{n\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+Composante Z de la densité locale. 
+
+\begin{DoxyReturn}{Returns}
+arma\+::vec Le vecteur contenant les composantes Z de la densité locale pour un vecteur donné contenant les coordonnées z. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_basis_ab6095856207deef6f202fdc127d7c076}\label{class_basis_ab6095856207deef6f202fdc127d7c076}} 
+\index{Basis@{Basis}!mMax@{mMax}}
+\index{mMax@{mMax}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{mMax}{mMax}}
+{\footnotesize\ttfamily int Basis\+::m\+Max}
+
+
+
+Indice de base max des m. 
+
+Troncature de base  \mbox{\Hypertarget{class_basis_a457e804b99cbfb30f81bf2bb6d3f794e}\label{class_basis_a457e804b99cbfb30f81bf2bb6d3f794e}} 
+\index{Basis@{Basis}!n\_zMax@{n\_zMax}}
+\index{n\_zMax@{n\_zMax}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{n\_zMax}{n\_zMax}}
+{\footnotesize\ttfamily arma\+::imat Basis\+::n\+\_\+z\+Max}
+
+
+
+Matrice contenant les indices de base max des n pour la partie z. 
+
+\mbox{\Hypertarget{class_basis_a611451ea36afb2b83e64e6f12cc8f4f7}\label{class_basis_a611451ea36afb2b83e64e6f12cc8f4f7}} 
+\index{Basis@{Basis}!nMax@{nMax}}
+\index{nMax@{nMax}!Basis@{Basis}}
+\doxysubsubsection{\texorpdfstring{nMax}{nMax}}
+{\footnotesize\ttfamily arma\+::ivec Basis\+::n\+Max}
+
+
+
+Matrice contenant les indices de base max des n. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/basis.\+h\item 
+src/basis.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,32 @@
+\hypertarget{basis_8h_source}{}\doxysection{basis.\+h}
+\label{basis_8h_source}\index{headers/basis.h@{headers/basis.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <armadillo>}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef BASIS}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define BASIS}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{13 \textcolor{keywordtype}{int} calcule\_mMax(\textcolor{keyword}{const} \textcolor{keywordtype}{int}, \textcolor{keyword}{const} \textcolor{keywordtype}{double});}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_basis}{Basis}}}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21     \textcolor{keyword}{public}:}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_basis}{Basis}}(\textcolor{keywordtype}{double}, \textcolor{keywordtype}{double}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{double});}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{37         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basis_ab6095856207deef6f202fdc127d7c076}{mMax}};}
+\DoxyCodeLine{43         arma::ivec \mbox{\hyperlink{class_basis_a611451ea36afb2b83e64e6f12cc8f4f7}{nMax}};}
+\DoxyCodeLine{48         arma::imat \mbox{\hyperlink{class_basis_a457e804b99cbfb30f81bf2bb6d3f794e}{n\_zMax}};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{60         arma::vec \mbox{\hyperlink{class_basis_a13dd26ef5b5ceebe04135c018b34606e}{rPart}}(\textcolor{keyword}{const} arma::vec \&, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{66         arma::vec \mbox{\hyperlink{class_basis_a22a3d3b6b36eabfa5405fce84ac6dd4e}{zPart}}(\textcolor{keyword}{const} arma::vec \&, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72         arma::mat \mbox{\hyperlink{class_basis_a3f514f5473dff6fee29421e9acb26055}{basisFunc}}(\textcolor{keywordtype}{int} m, \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{int} n\_z, \textcolor{keyword}{const} arma::vec \&, \textcolor{keyword}{const} arma::vec \&);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{keyword}{private}:}
+\DoxyCodeLine{78         \textcolor{keywordtype}{double} b\_z,b\_r;}
+\DoxyCodeLine{79         }
+\DoxyCodeLine{80 \};}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

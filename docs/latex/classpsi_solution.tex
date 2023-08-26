@@ -1,0 +1,105 @@
+\hypertarget{classpsi_solution}{}\doxysection{psi\+Solution Class Reference}
+\label{classpsi_solution}\index{psiSolution@{psiSolution}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsi_solution_a1fd135a2b8eadc5a471112fc50587732}\label{classpsi_solution_a1fd135a2b8eadc5a471112fc50587732}} 
+{\bfseries psi\+Solution} (int)
+\item 
+arma\+::mat \mbox{\hyperlink{classpsi_solution_a0477fd513b0e885520cc92317d870eb6}{calcule\+Solution}} (const arma\+::vec \&)
+\begin{DoxyCompactList}\small\item\em Calcule les psi-\/solutions. \end{DoxyCompactList}\item 
+arma\+::mat \mbox{\hyperlink{classpsi_solution_afa3fe7713917246fbace1d86918447d7}{ortho\+Mat}} ()
+\begin{DoxyCompactList}\small\item\em Vérifie l\textquotesingle{}orthonormalité des psi-\/solutions. \end{DoxyCompactList}\item 
+arma\+::vec \mbox{\hyperlink{classpsi_solution_a0d0bf73f06c4280f75c2be41a414a8f2}{derivee\+\_\+seconde}} (const arma\+::vec \&)
+\begin{DoxyCompactList}\small\item\em Calcule la dérivée seconde de la solution en des points du vecteur. On peut utiliser l\textquotesingle{}approximation discrète \+: \href{https://fr.wikipedia.org/wiki/D\%C3\%A9riv\%C3\%A9e_seconde_discr\%C3\%A8te}{\texttt{ https\+://fr.\+wikipedia.\+org/wiki/\+D\%\+C3\%\+A9riv\%\+C3\%\+A9e\+\_\+seconde\+\_\+discr\%\+C3\%\+A8te}}. \end{DoxyCompactList}\item 
+arma\+::vec \mbox{\hyperlink{classpsi_solution_a5152c6bc8eb8aebf5a7f03fc092c7ca9}{energy\+Mat}} ()
+\begin{DoxyCompactList}\small\item\em Calcule les niveaux d\textquotesingle{}énergie pour les solutions psi de l\textquotesingle{}équation à l\textquotesingle{}aide de l\textquotesingle{}équation 1D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsi_solution_ad0c93dc6ac4d729e2fc4e8da63986288}\label{classpsi_solution_ad0c93dc6ac4d729e2fc4e8da63986288}} 
+int \mbox{\hyperlink{classpsi_solution_ad0c93dc6ac4d729e2fc4e8da63986288}{n\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Jusqu\textquotesingle{}à quel niveau d\textquotesingle{}énergie max seront calculés les solutions de l\textquotesingle{}équation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpsi_solution_a0477fd513b0e885520cc92317d870eb6}\label{classpsi_solution_a0477fd513b0e885520cc92317d870eb6}} 
+\index{psiSolution@{psiSolution}!calculeSolution@{calculeSolution}}
+\index{calculeSolution@{calculeSolution}!psiSolution@{psiSolution}}
+\doxysubsubsection{\texorpdfstring{calculeSolution()}{calculeSolution()}}
+{\footnotesize\ttfamily arma\+::mat psi\+Solution\+::calcule\+Solution (\begin{DoxyParamCaption}\item[{const arma\+::vec \&}]{vecteurZ }\end{DoxyParamCaption})}
+
+
+
+Calcule les psi-\/solutions. 
+
+retourne une matrice à 2 dimensions, contenant les valeurs de psi\+\_\+i(z) ; La ième colonne correspond aux valeurs de psi\+\_\+i évalué à une valeur de z différente à chaque ligne; Les valeurs de z sont données par le vecteur \mbox{[}vecteurZ\mbox{]} placé en argument
+
+\begin{DoxyReturn}{Returns}
+arma\+::mat
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em vecteurZ} & est le vecteur de rééls pour lesquels on possède les valeurs d\textquotesingle{}évaluation du polynome d\textquotesingle{}Hermite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+arma\+::mat Retourne une matrice de la forme suivante \+: exemple n\+\_\+max=2 \[ \begin{bmatrix} psi_0(z_0) & psi_1(z_0) & psi_2(z_0) \\ psi_0(z_1) & psi_1(z_1) & psi_2(z_1) \\ psi_0(z_2) & psi_1(z_2) & psi_2(z_2) \end{bmatrix} \] 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpsi_solution_a0d0bf73f06c4280f75c2be41a414a8f2}\label{classpsi_solution_a0d0bf73f06c4280f75c2be41a414a8f2}} 
+\index{psiSolution@{psiSolution}!derivee\_seconde@{derivee\_seconde}}
+\index{derivee\_seconde@{derivee\_seconde}!psiSolution@{psiSolution}}
+\doxysubsubsection{\texorpdfstring{derivee\_seconde()}{derivee\_seconde()}}
+{\footnotesize\ttfamily arma\+::vec psi\+Solution\+::derivee\+\_\+seconde (\begin{DoxyParamCaption}\item[{const arma\+::vec \&}]{Z }\end{DoxyParamCaption})}
+
+
+
+Calcule la dérivée seconde de la solution en des points du vecteur. On peut utiliser l\textquotesingle{}approximation discrète \+: \href{https://fr.wikipedia.org/wiki/D\%C3\%A9riv\%C3\%A9e_seconde_discr\%C3\%A8te}{\texttt{ https\+://fr.\+wikipedia.\+org/wiki/\+D\%\+C3\%\+A9riv\%\+C3\%\+A9e\+\_\+seconde\+\_\+discr\%\+C3\%\+A8te}}. 
+
+\begin{DoxyReturn}{Returns}
+arma\+::vec Les résultats de la dérivée seconde en ces points.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Z} & Les points où seront calculés la dérivée seconde \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+arma\+::vec Les résultats de la dérivée seconde 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpsi_solution_a5152c6bc8eb8aebf5a7f03fc092c7ca9}\label{classpsi_solution_a5152c6bc8eb8aebf5a7f03fc092c7ca9}} 
+\index{psiSolution@{psiSolution}!energyMat@{energyMat}}
+\index{energyMat@{energyMat}!psiSolution@{psiSolution}}
+\doxysubsubsection{\texorpdfstring{energyMat()}{energyMat()}}
+{\footnotesize\ttfamily arma\+::vec psi\+Solution\+::energy\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcule les niveaux d\textquotesingle{}énergie pour les solutions psi de l\textquotesingle{}équation à l\textquotesingle{}aide de l\textquotesingle{}équation 1D. 
+
+\begin{DoxyReturn}{Returns}
+arma\+::vec les niveaux d\textquotesingle{}énergies sous forme d\textquotesingle{}un vecteur colonne \[Z= \begin{bmatrix} E_0 \\ E_1 \\ ... \\ E_{n_{max}} \end{bmatrix} \] 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpsi_solution_afa3fe7713917246fbace1d86918447d7}\label{classpsi_solution_afa3fe7713917246fbace1d86918447d7}} 
+\index{psiSolution@{psiSolution}!orthoMat@{orthoMat}}
+\index{orthoMat@{orthoMat}!psiSolution@{psiSolution}}
+\doxysubsubsection{\texorpdfstring{orthoMat()}{orthoMat()}}
+{\footnotesize\ttfamily arma\+::mat psi\+Solution\+::ortho\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vérifie l\textquotesingle{}orthonormalité des psi-\/solutions. 
+
+Verifie l\textquotesingle{}orthonormalité des psi-\/solutions. On vérifie pour tous les couples n,m $<$= n\+\_\+max. On retourne les résultats dans une matrice dont les numéros de lignes et les colonnes correspondent aux valeurs de n et m.
+
+\begin{DoxyReturn}{Returns}
+arma\+::mat une matrice avec les résultats des différents produits scalaires des solutions
+
+arma\+::mat Retourne une matrice de la forme suivante \+: exemple n\+\_\+max=1 \[ \begin{bmatrix} \int \psi^*_0(z)\psi_0(z) dz & \int \psi^*_0(z)\psi_1(z) dz \\ \int \psi^*_1(z)\psi_0(z) dz & \int \psi^*_1(z)\psi_1(z) dz \\ \end{bmatrix} \] 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/old/psi\+Solution.\+h\item 
+src/old/psi\+Solution.\+cpp\end{DoxyCompactItemize}

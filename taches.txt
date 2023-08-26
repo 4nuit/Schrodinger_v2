@@ -1,0 +1,15 @@
+Equation de Schrodinger
+Trouver les solutions de l'équation : phi_n(z)
+    Ecrire l'expression de phi_n(z):
+    - n!
+    - constantes : omega, pi, hbarre, m (dépend du choix de la particule)
+    - H_n : définition par récurrence
+
+Calculer les solutions et les représenter sur un graphe
+
+Calculer la valeur numérique des états énergétiques E_n :
+    - en utilisant l'équation avec la valeur de phi_n
+    - estimer la valeur de la dérivée pour p(z)
+
+Vérifier l'orthonormalité des solutions :
+    - calcul de l'intégrale

@@ -1,0 +1,142 @@
+\hypertarget{class_poly}{}\doxysection{Poly Class Reference}
+\label{class_poly}\index{Poly@{Poly}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_poly_aa3def076b74bed67904976ad4f9fe9b1}{Poly}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_poly}{Poly}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_poly_af78f9fdc4a0de3343f4b9b845a31e74b}{calc\+Hermite}} (int, const arma\+::vec \&)
+\begin{DoxyCompactList}\small\item\em Construct a new arma\+::calc Hermite object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_poly_a197e90d8cdbe9110b6b67cdb2bd3944e}{calc\+Laguerre}} (int, int, const arma\+::vec \&)
+\begin{DoxyCompactList}\small\item\em Calcule les résultats du polynome généralisé de Laguerre d\textquotesingle{}indice i=0 à un entier donné deg\+\_\+max appliqué à un vecteur colonne vec\+\_\+eta, sous forme d\textquotesingle{}une matrice à 3 dimensions. \end{DoxyCompactList}\item 
+const arma\+::vec \mbox{\hyperlink{class_poly_ac43137d57786fbb2e3996045a8c212dd}{hermite}} (int)
+\begin{DoxyCompactList}\small\item\em Renvoie les résultats du polynome d\textquotesingle{}Hermite d\textquotesingle{}indice i=0 à un entier donné n\+\_\+max appliqué à un vecteur colonne Z, sous forme d\textquotesingle{}une matrice. \end{DoxyCompactList}\item 
+const arma\+::vec \mbox{\hyperlink{class_poly_a6e517890a1da5c0ea7d9be547400f98d}{laguerre}} (int, int)
+\begin{DoxyCompactList}\small\item\em Renvoie le vecteur de valeurs du polynome de Laguerre avec les valeurs m et n pour les valeurs de z qui ont été fournies dans calc\+Laguerre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_poly_aa3def076b74bed67904976ad4f9fe9b1}\label{class_poly_aa3def076b74bed67904976ad4f9fe9b1}} 
+\index{Poly@{Poly}!Poly@{Poly}}
+\index{Poly@{Poly}!Poly@{Poly}}
+\doxysubsubsection{\texorpdfstring{Poly()}{Poly()}}
+{\footnotesize\ttfamily Poly\+::\+Poly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_poly}{Poly}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_poly_af78f9fdc4a0de3343f4b9b845a31e74b}\label{class_poly_af78f9fdc4a0de3343f4b9b845a31e74b}} 
+\index{Poly@{Poly}!calcHermite@{calcHermite}}
+\index{calcHermite@{calcHermite}!Poly@{Poly}}
+\doxysubsubsection{\texorpdfstring{calcHermite()}{calcHermite()}}
+{\footnotesize\ttfamily void Poly\+::calc\+Hermite (\begin{DoxyParamCaption}\item[{int}]{deg\+\_\+max,  }\item[{const arma\+::vec \&}]{Z }\end{DoxyParamCaption})}
+
+
+
+Construct a new arma\+::calc Hermite object. 
+
+Calcule les résultats du polynome d\textquotesingle{}Hermite d\textquotesingle{}indice i=0 à un entier donné deg\+\_\+max appliqué à un vecteur colonne Z, sous forme d\textquotesingle{}une matrice.
+
+
+\begin{DoxyParams}{Parameters}
+{\em deg\+\_\+max} & Indice max des polynomes d\textquotesingle{}Hermites utilisés dans la matrice \\
+\hline
+{\em Z} & Vecteur colonne contenant les points à appliquer aux polynomes d\textquotesingle{}Hermite Calcule une matrice de la forme suivante \+: $Z=\begin{bmatrix} z_0 & ... & z_{q-1} \end{bmatrix}$  \[
+ \begin{bmatrix}
+ H_0(z_0) & .. & H_{n_{max}-1}(z_0) \\
+ .. & .. & .. \\
+ H_0(z_q) & .. & H_{n_{max}-1}(z_q)
+ \end{bmatrix}
+ \] \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_poly_a197e90d8cdbe9110b6b67cdb2bd3944e}\label{class_poly_a197e90d8cdbe9110b6b67cdb2bd3944e}} 
+\index{Poly@{Poly}!calcLaguerre@{calcLaguerre}}
+\index{calcLaguerre@{calcLaguerre}!Poly@{Poly}}
+\doxysubsubsection{\texorpdfstring{calcLaguerre()}{calcLaguerre()}}
+{\footnotesize\ttfamily void Poly\+::calc\+Laguerre (\begin{DoxyParamCaption}\item[{int}]{m\+\_\+max,  }\item[{int}]{deg\+\_\+max,  }\item[{const arma\+::vec \&}]{vec\+\_\+eta }\end{DoxyParamCaption})}
+
+
+
+Calcule les résultats du polynome généralisé de Laguerre d\textquotesingle{}indice i=0 à un entier donné deg\+\_\+max appliqué à un vecteur colonne vec\+\_\+eta, sous forme d\textquotesingle{}une matrice à 3 dimensions. 
+
+\begin{DoxyReturn}{Returns}
+arma\+::mat
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em deg\+\_\+max} & Indice max des polynomes d\textquotesingle{}Hermites utilisés dans la matrice \\
+\hline
+{\em m\+\_\+max} & Valeur maximals de m \\
+\hline
+{\em vec\+\_\+eta} & Vecteur colonne contenant les points à appliquer aux polynomes d\textquotesingle{}Hermite\\
+\hline
+\end{DoxyParams}
+Calcule un cube, dont chaque tranche (m fixé) à la forme suivante \+: $vec\_eta=\begin{bmatrix} \eta_0 & ... & \eta_{q-1} \end{bmatrix}$  \[
+ \begin{bmatrix}
+ L_0^m(\eta_0) & .. & L_{n_{max}-1}^m(\eta_0) \\
+ .. & .. & .. \\
+ L_0^m(\eta_q) & .. & L_{n_{max}-1}^m(\eta_q)
+ \end{bmatrix}
+ \] \mbox{\Hypertarget{class_poly_ac43137d57786fbb2e3996045a8c212dd}\label{class_poly_ac43137d57786fbb2e3996045a8c212dd}} 
+\index{Poly@{Poly}!hermite@{hermite}}
+\index{hermite@{hermite}!Poly@{Poly}}
+\doxysubsubsection{\texorpdfstring{hermite()}{hermite()}}
+{\footnotesize\ttfamily const arma\+::vec Poly\+::hermite (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Renvoie les résultats du polynome d\textquotesingle{}Hermite d\textquotesingle{}indice i=0 à un entier donné n\+\_\+max appliqué à un vecteur colonne Z, sous forme d\textquotesingle{}une matrice. 
+
+Renvoie le vecteur de valeurs du polynome d\textquotesingle{}Hermite de degré n pour les valeurs de z qui ont été fournies dans calc\+Hermite.
+
+\begin{DoxyReturn}{Returns}
+arma\+::mat La matrice avec les résultats du polynome d\textquotesingle{}Hermite
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const arma\+::vec 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_poly_a6e517890a1da5c0ea7d9be547400f98d}\label{class_poly_a6e517890a1da5c0ea7d9be547400f98d}} 
+\index{Poly@{Poly}!laguerre@{laguerre}}
+\index{laguerre@{laguerre}!Poly@{Poly}}
+\doxysubsubsection{\texorpdfstring{laguerre()}{laguerre()}}
+{\footnotesize\ttfamily const arma\+::vec Poly\+::laguerre (\begin{DoxyParamCaption}\item[{int}]{m,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Renvoie le vecteur de valeurs du polynome de Laguerre avec les valeurs m et n pour les valeurs de z qui ont été fournies dans calc\+Laguerre. 
+
+\begin{DoxyReturn}{Returns}
+arma\+::mat
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & entier \\
+\hline
+{\em n} & entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const arma\+::vec 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/poly.\+h\item 
+src/poly.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,116 @@
+\hypertarget{test__mandatory_8h_source}{}\doxysection{test\+\_\+mandatory.\+h}
+\label{test__mandatory_8h_source}\index{tests/test\_mandatory.h@{tests/test\_mandatory.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <cxxtest/TestSuite.h>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <armadillo>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}../headers/poly.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../headers/basis.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_mandatory_test_suite}{MandatoryTestSuite}} : \textcolor{keyword}{public} CxxTest::TestSuite}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} testMandatory0( \textcolor{keywordtype}{void} )}
+\DoxyCodeLine{14     \{}
+\DoxyCodeLine{15         \textcolor{comment}{// Mandatory test \#00 -\/ Hermite and Laguerre polynomials}}
+\DoxyCodeLine{16         \mbox{\hyperlink{class_poly}{Poly}} poly;}
+\DoxyCodeLine{17         arma::vec zVals, calcVals, targetVals;}
+\DoxyCodeLine{18         zVals = \{-\/3.1, -\/2.3, -\/1.0, -\/0.3, 0.1, 4.3, 9.2, 13.7\};}
+\DoxyCodeLine{19         poly.\mbox{\hyperlink{class_poly_af78f9fdc4a0de3343f4b9b845a31e74b}{calcHermite}}(6, zVals); \textcolor{comment}{// compute Hermite polynomials for n in \{0 ... 5\}}}
+\DoxyCodeLine{20         calcVals   = poly.\mbox{\hyperlink{class_poly_ac43137d57786fbb2e3996045a8c212dd}{hermite}}(4); \textcolor{comment}{// n = 4}}
+\DoxyCodeLine{21         targetVals = \{  1.02835360e+03,  2.05825600e+02, -\/2.00000000e+01,  7.80960000e+00,}
+\DoxyCodeLine{22                         1.15216000e+01,  4.59456160e+03,  1.10572154e+05,  5.54643458e+05\};}
+\DoxyCodeLine{23         TS\_ASSERT\_DELTA(arma::norm(calcVals / targetVals -\/ 1.0), 0.0, 1e-\/08);}
+\DoxyCodeLine{24         calcVals   = poly.\mbox{\hyperlink{class_poly_ac43137d57786fbb2e3996045a8c212dd}{hermite}}(5); \textcolor{comment}{// n = 5}}
+\DoxyCodeLine{25         targetVals = \{ -\/4.76676832e+03, -\/3.88909760e+02,  8.00000000e+00, -\/3.17577600e+01,}
+\DoxyCodeLine{26                         1.18403200e+01,  3.48375818e+04,  1.98557479e+06,  1.50339793e+07\};}
+\DoxyCodeLine{27         TS\_ASSERT\_DELTA(arma::norm(calcVals / targetVals -\/ 1.0), 0.0, 1e-\/08);}
+\DoxyCodeLine{28         zVals = \{0.1, 0.3, 1.2, 1.8, 2.0, 2.5, 7.1, 11.1\};}
+\DoxyCodeLine{29         poly.\mbox{\hyperlink{class_poly_a197e90d8cdbe9110b6b67cdb2bd3944e}{calcLaguerre}}(6, 4, zVals); \textcolor{comment}{// compute generalized Laguerre polynomials for m in \{0 ... 5\} and n in \{0 ... 3\}}}
+\DoxyCodeLine{30         calcVals   = poly.\mbox{\hyperlink{class_poly_a6e517890a1da5c0ea7d9be547400f98d}{laguerre}}(4, 2); \textcolor{comment}{// m = 4, n = 2}}
+\DoxyCodeLine{31         targetVals = \{  14.405,  13.245,  8.52 ,  5.82 ,  5.,  3.125,  -\/2.395,  10.005\};}
+\DoxyCodeLine{32         TS\_ASSERT\_DELTA(arma::norm(calcVals / targetVals -\/ 1.0), 0.0, 1e-\/08);}
+\DoxyCodeLine{33         calcVals   = poly.\mbox{\hyperlink{class_poly_a6e517890a1da5c0ea7d9be547400f98d}{laguerre}}(5, 3); \textcolor{comment}{// m = 5, n = 3}}
+\DoxyCodeLine{34         targetVals = \{ 53.23983333,  47.95550000,  27.87200000,  17.5880,}
+\DoxyCodeLine{35                     14.66666667,   8.39583333,  -\/0.81183333,  10.1015\};}
+\DoxyCodeLine{36         TS\_ASSERT\_DELTA(arma::norm(calcVals / targetVals -\/ 1.0), 0.0, 1e-\/08);}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} testMandatory1( \textcolor{keywordtype}{void} )}
+\DoxyCodeLine{43     \{}
+\DoxyCodeLine{44         \textcolor{comment}{// Mandatory test \#01 -\/ Basis truncation}}
+\DoxyCodeLine{45         \textcolor{comment}{//     br = 1.935801664793151, bz = 2.829683956491218, N = 14, Q = 1.3}}
+\DoxyCodeLine{46         \mbox{\hyperlink{class_basis}{Basis}} basis(1.935801664793151,      2.829683956491218,     14,     1.3);}
+\DoxyCodeLine{47         TS\_ASSERT\_EQUALS(basis.\mbox{\hyperlink{class_basis_ab6095856207deef6f202fdc127d7c076}{mMax}}, 14);}
+\DoxyCodeLine{48         arma::ivec nMax = \{7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1\};}
+\DoxyCodeLine{49         TS\_ASSERT((basis.\mbox{\hyperlink{class_basis_a611451ea36afb2b83e64e6f12cc8f4f7}{nMax}} -\/ nMax).is\_zero());}
+\DoxyCodeLine{50         arma::imat n\_zMax = \{\{18, 15, 13, 10, 7, 5, 2\}, }
+\DoxyCodeLine{51                             \{16, 14, 11,  9, 6, 3, 1\}, }
+\DoxyCodeLine{52                             \{15, 13, 10,  7, 5, 2, 0\}, }
+\DoxyCodeLine{53                             \{14, 11,  9,  6, 3, 1, 0\}, }
+\DoxyCodeLine{54                             \{13, 10,  7,  5, 2, 0, 0\}, }
+\DoxyCodeLine{55                             \{11,  9,  6,  3, 1, 0, 0\}, }
+\DoxyCodeLine{56                             \{10,  7,  5,  2, 0, 0, 0\}, }
+\DoxyCodeLine{57                             \{ 9,  6,  3,  1, 0, 0, 0\}, }
+\DoxyCodeLine{58                             \{ 7,  5,  2,  0, 0, 0, 0\}, }
+\DoxyCodeLine{59                             \{ 6,  3,  1,  0, 0, 0, 0\}, }
+\DoxyCodeLine{60                             \{ 5,  2,  0,  0, 0, 0, 0\}, }
+\DoxyCodeLine{61                             \{ 3,  1,  0,  0, 0, 0, 0\}, }
+\DoxyCodeLine{62                             \{ 2,  0,  0,  0, 0, 0, 0\}, }
+\DoxyCodeLine{63                             \{ 1,  0,  0,  0, 0, 0, 0\}\};}
+\DoxyCodeLine{64         \textcolor{comment}{// check if matrices are equal}}
+\DoxyCodeLine{65         TS\_ASSERT((basis.\mbox{\hyperlink{class_basis_a457e804b99cbfb30f81bf2bb6d3f794e}{n\_zMax}} -\/ n\_zMax).is\_zero());}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} testMandatory2( \textcolor{keywordtype}{void} )}
+\DoxyCodeLine{72     \{}
+\DoxyCodeLine{73         \textcolor{comment}{// Mandatory test \#02 -\/ Basis r-\/functions}}
+\DoxyCodeLine{74         \textcolor{comment}{//     br = 1.935801664793151, bz = 2.829683956491218, N = 14, Q = 1.3}}
+\DoxyCodeLine{75         \mbox{\hyperlink{class_basis}{Basis}} basis(1.935801664793151,      2.829683956491218,     14,     1.3);}
+\DoxyCodeLine{76         arma::vec r = \{3.1, 2.3, 1.0, 0.0, 0.1, 4.3, 9.2, 13.7\};}
+\DoxyCodeLine{77         arma::vec res00 = \{ 8.08521235111303e-\/02,}
+\DoxyCodeLine{78                             1.43887615825118e-\/01,}
+\DoxyCodeLine{79                             2.55045100912706e-\/01,}
+\DoxyCodeLine{80                             2.91450097294984e-\/01,}
+\DoxyCodeLine{81                             2.91061479407116e-\/01,}
+\DoxyCodeLine{82                             2.47240792330589e-\/02,}
+\DoxyCodeLine{83                             3.63004153921473e-\/06,}
+\DoxyCodeLine{84                             3.87659726026123e-\/12\};}
+\DoxyCodeLine{85         TS\_ASSERT\_DELTA(arma::norm(basis.\mbox{\hyperlink{class_basis_a13dd26ef5b5ceebe04135c018b34606e}{rPart}}(r, 0, 0) -\/ res00), 0.0, 1e-\/15);}
+\DoxyCodeLine{86         arma::vec res82 = \{ 5.87858442372438e-\/02,}
+\DoxyCodeLine{87                             1.35240488413384e-\/02,}
+\DoxyCodeLine{88                             4.06810074575519e-\/05,}
+\DoxyCodeLine{89                             0.00000000000000e+00,}
+\DoxyCodeLine{90                             4.92817669085478e-\/13,}
+\DoxyCodeLine{91                             8.52011998934850e-\/02,}
+\DoxyCodeLine{92                             5.20525909328609e-\/02,}
+\DoxyCodeLine{93                             1.44615166152252e-\/05\};}
+\DoxyCodeLine{94         TS\_ASSERT\_DELTA(arma::norm(basis.\mbox{\hyperlink{class_basis_a13dd26ef5b5ceebe04135c018b34606e}{rPart}}(r, 8, 2) -\/ res82), 0.0, 1e-\/15);}
+\DoxyCodeLine{95     \}}
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} testMandatory3( \textcolor{keywordtype}{void} )}
+\DoxyCodeLine{101     \{}
+\DoxyCodeLine{102         \textcolor{comment}{// Mandatory test \#03 -\/ Basis z-\/functions}}
+\DoxyCodeLine{103         \textcolor{comment}{//     br = 1.935801664793151, bz = 2.829683956491218, N = 14, Q = 1.3}}
+\DoxyCodeLine{104         \mbox{\hyperlink{class_basis}{Basis}} basis(1.935801664793151,      2.829683956491218,     14,     1.3);}
+\DoxyCodeLine{105         arma::vec z = \{-\/10.1, -\/8.4, -\/1.0, 0.0, 0.1, 4.3, 9.2, 13.7\};}
+\DoxyCodeLine{106         arma::vec res00 = \{ 7.64546544834383e-\/04,}
+\DoxyCodeLine{107                             5.44886272162148e-\/03,}
+\DoxyCodeLine{108                             4.19492564268520e-\/01,}
+\DoxyCodeLine{109                             4.46522724110539e-\/01,}
+\DoxyCodeLine{110                             4.46243982300708e-\/01,}
+\DoxyCodeLine{111                             1.40736821086932e-\/01,}
+\DoxyCodeLine{112                             2.26186220733178e-\/03,}
+\DoxyCodeLine{113                             3.62929640195959e-\/06\};}
+\DoxyCodeLine{114         TS\_ASSERT\_DELTA(arma::norm(basis.\mbox{\hyperlink{class_basis_a22a3d3b6b36eabfa5405fce84ac6dd4e}{zPart}}(z, 0) -\/ res00), 0.0, 1e-\/15);}
+\DoxyCodeLine{115         arma::vec res15 = \{-\/9.48674551049192e-\/02,}
+\DoxyCodeLine{116                         -\/1.40338701953237e-\/03,}
+\DoxyCodeLine{117                             1.85620628040096e-\/01,}
+\DoxyCodeLine{118                         -\/0.00000000000000e+00,}
+\DoxyCodeLine{119                         -\/3.93028470685214e-\/02,}
+\DoxyCodeLine{120                         -\/1.79526868763440e-\/01,}
+\DoxyCodeLine{121                             2.15604096600475e-\/01,}
+\DoxyCodeLine{122                             2.44977220882127e-\/01\};}
+\DoxyCodeLine{123         TS\_ASSERT\_DELTA(arma::norm(basis.\mbox{\hyperlink{class_basis_a22a3d3b6b36eabfa5405fce84ac6dd4e}{zPart}}(z, 15) -\/ res15), 0.0, 1e-\/15);}
+\DoxyCodeLine{124     \}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,23 @@
+\_form#0=54x11:$n_max=2$
+\_form#1=136x44:\[ \begin{matrix} H_0(z_0) & H_1(z_0) & H_2(z_0) \\ H_0(z_1) & H_1(z_1) & H_2(z_1) \\ H_0(z_2) & H_1(z_2) & H_2(z_2) \end{matrix} \]
+\_form#2=51x10:\[Z= \begin{matrix} 1 & 5 \end{matrix} \]
+\_form#3=230x10:\[ \begin{matrix} 1 & 2 & 2 & -4 & -20 1 & 10 & 98 & 940 & 8812 \end{matrix} \]
+\_form#4=69x10:\[ Z=\begin{matrix} 1 & 1 & 1 \end{matrix} \]
+\_form#5=31x39:\[ Z=\begin{matrix} 1 \\ 1 \\ 1 \end{matrix} \]
+\_form#6=51x11:$n_{max}=2$
+\_form#7=146x46:\[ \begin{bmatrix} H_0(z_0) & H_1(z_0) & H_2(z_0) \\ H_0(z_1) & H_1(z_1) & H_2(z_1) \\ H_0(z_2) & H_1(z_2) & H_2(z_2) \end{bmatrix} \]
+\_form#8=60x16:\[Z= \begin{bmatrix} 1 & 5 \end{bmatrix} \]
+\_form#9=238x16:\[ \begin{bmatrix} 1 & 2 & 2 & -4 & -20 1 & 10 & 98 & 940 & 8812 \end{bmatrix} \]
+\_form#10=78x16:\[ Z=\begin{bmatrix} 1 & 1 & 1 \end{bmatrix} \]
+\_form#11=45x46:\[ Z=\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \]
+\_form#12=81x16:$Z=\begin{bmatrix} 1 & 1 & 1 \end{bmatrix}$
+\_form#13=133x31:\[ \begin{bmatrix} 1 & 2 & 2 & -4 & -20 \\ 1 & 10 & 98 & 940 & 8812 \end{bmatrix} \]
+\_form#14=98x16:$Z=\begin{bmatrix} z_0 & z_1 & z_2 \end{bmatrix}$
+\_form#15=100x16:$Z=\begin{bmatrix} z_0 & ... & z_m \end{bmatrix}$
+\_form#16=143x46:\[ \begin{bmatrix} H_0(z_0) & .. & H_{n_{max}}(z_0) \\ .. & .. & .. \\ H_0(z_m) & .. & H_{n_{max}}(z_m) \end{bmatrix} \]
+\_form#17=164x46:\[ \begin{bmatrix} psi_0(z_0) & psi_1(z_0) & psi_2(z_0) \\ psi_0(z_1) & psi_1(z_1) & psi_2(z_1) \\ psi_0(z_2) & psi_1(z_2) & psi_2(z_2) \end{bmatrix} \]
+\_form#18=186x31:\[ \begin{bmatrix} \int \psi^*_0(z)\psi_0(z) dz & \int \psi^*_0(z)\psi_1(z) dz \\ \int \psi^*_1(z)\psi_0(z) dz & \int \psi^*_1(z)\psi_1(z) dz \\ \end{bmatrix} \]
+\_form#19=74x61:\[Z= \begin{bmatrix} E_0 \\ E_1 \\ ... \\ E_{n_{max}} \end{bmatrix} \]
+\_form#20=43x31:\[Z= \begin{bmatrix} 1 \\ 5 \end{bmatrix} \]
+\_form#21=45x61:\[ Z=\begin{bmatrix} 1 \\ 5 \\ 2 \\ 8 \end{bmatrix} \]
+\_form#22=41x61:\[ \begin{bmatrix} 1 & 2\\ 1 & 10\\ 1 & 4\\ 1 & 16 \end{bmatrix} \]
